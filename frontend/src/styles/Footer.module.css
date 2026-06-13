@@ -1,0 +1,104 @@
+.footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 24px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.brand {
+  display: flex;
+  align-items: center; /* vertically center logo and text */
+  gap: 10px; /* space between logo and subtitle */
+}
+
+
+.brand span {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.brand p {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.links a {
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.links a:hover { color: var(--secondary); }
+
+.social {
+  margin-top:14px;
+  display: flex;
+  gap: 12px;
+  font-size: 22px;
+}
+
+.copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+.copySocial {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.copySocial a {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.copySocial a:hover {
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--secondary);
+}
+
+.logo {
+  height: 70px; /* adjust as needed */
+  width: auto;
+  display: block;
+}
