@@ -68,7 +68,7 @@ const handleDelete = async (id) => {
   const fetchItems = async () => {
     try {
       const response = await fetch(
-        (`${API_URL}/items`)
+        (`${API_URL}/api/items`)
       )
       const data = await response.json()
       console.log('Fetched items:', data)
@@ -86,7 +86,7 @@ const handleDelete = async (id) => {
 
   try {
     const response = await fetch(
-      `${API_URL}/login`,
+      `${API_URL}/api/login`,
       {
         method: 'POST',
         headers: {
@@ -196,7 +196,7 @@ for (let pair of formData.entries()) {
   console.log(pair[0], pair[1])
 }
 
-response = await fetch(`${API_URL}/items`, {
+response = await fetch(`${API_URL}/api/items`, {
   method: 'POST',
   headers: {
     Authorization: `Bearer ${token}`
