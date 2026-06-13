@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import styles from '../styles/Navbar.module.css'
 import { useLanguage } from '../context/LanguageContext'
-import logo from '../assets/images/logo.jpeg';
+import logo from '../assets/images/Logo.jpeg';
 
 const links = [
   { to: '/', labelKey: 'nav.home' },
