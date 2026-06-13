@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../styles/Footer.module.css'
 import { useLanguage } from '../context/LanguageContext'
-import logo from '../assets/images/logo.jpeg'
+import logo from '../assets/images/Logo.jpeg'
 
 /**
  * Footer Component
