@@ -16,7 +16,7 @@ export default function CategoryItems({ category }) {
 
     async function fetchItems() {
   try {
-    const res = await fetch(`${BASE_URL}/api/items`)
+    const res = await fetch(`${API_URL}/api/items`)
     const data = await res.json()
 
     console.log('API Response:', data)
