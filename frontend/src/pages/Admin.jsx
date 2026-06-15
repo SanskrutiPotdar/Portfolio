@@ -41,20 +41,19 @@ const handleDelete = async (id) => {
   try {
     const token = localStorage.getItem('adminToken')
 
-    const res = await fetch(`${API_URL}/items/${id}`, {
+    const res = await fetch(`${API_URL}/api/items/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`
       }
     })
 
-    const data = await res.json()
-
     if (!res.ok) {
-      throw new Error(data.message)
-    }
+  const text = await res.text()
+  throw new Error(text)
+}
 
-    console.log("Deleted:", data)
+const data = await res.json()
 
     // ✅ instant UI update
     setItems(prev => prev.filter(i => (i._id || i.id) !== id))
