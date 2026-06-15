@@ -175,7 +175,8 @@ const data = await res.json()
     setLoading(true)
 
     const token = localStorage.getItem('adminToken')
-
+    console.log('TOKEN:', token)
+    
     let response
     const formData = new FormData()
 
