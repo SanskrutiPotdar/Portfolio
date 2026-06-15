@@ -513,8 +513,8 @@ response = await fetch(`${API_URL}/api/items`, {
     <div className={styles.itemPreview}>
       {item.files?.[0] ? (
         <img
-          src={`http://localhost:5000${item.files[0].url}`}
-          alt={item.title}
+          src={`${API_URL}${item.files[0].url}`}
+  alt={item.title}
           className={styles.previewImage}
         />
       ) : (
@@ -597,7 +597,7 @@ response = await fetch(`${API_URL}/api/items`, {
     </button>
 
     <img
-      src={`http://localhost:5000${lightbox.url}`}
+      src={`${API_URL}${lightbox.url}`}
       alt="preview"
       onClick={(e) => e.stopPropagation()}
     />

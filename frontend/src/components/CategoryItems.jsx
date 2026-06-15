@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import articleStyles from '../styles/Articles.module.css'
 import styles from '../styles/Admin.module.css'
 
-const BASE_URL = 'http://localhost:5000'
+const API_URL = import.meta.env.VITE_API_URL
 
 export default function CategoryItems({ category }) {
   const [items, setItems] = useState([])
@@ -15,26 +15,39 @@ export default function CategoryItems({ category }) {
     if (token) setIsAdmin(true)
 
     async function fetchItems() {
-      try {
-        const res = await fetch(`${BASE_URL}/api/items`)
-        const data = await res.json()
+  try {
+    const res = await fetch(`${BASE_URL}/api/items`)
+    const data = await res.json()
 
-        setItems(
-          Array.isArray(data)
-            ? data.filter(
-                i =>
-                  (i.category || '').toLowerCase() ===
-                  (category || '').toLowerCase()
-              )
-            : []
-        )
-      } catch (err) {
-        console.error(err)
-        setItems([])
-      } finally {
-        setLoading(false)
-      }
-    }
+    console.log('API Response:', data)
+    console.log('Category Prop:', category)
+
+    const filtered = Array.isArray(data)
+      ? data.filter(i => {
+          console.log(
+            'DB Category:',
+            i.category,
+            '| Page Category:',
+            category
+          )
+
+          return (
+            (i.category || '').toLowerCase() ===
+            (category || '').toLowerCase()
+          )
+        })
+      : []
+
+    console.log('Filtered Items:', filtered)
+
+    setItems(filtered)
+  } catch (err) {
+    console.error('Fetch Error:', err)
+    setItems([])
+  } finally {
+    setLoading(false)
+  }
+}
 
     fetchItems()
   }, [category])
@@ -42,7 +55,7 @@ export default function CategoryItems({ category }) {
   const handleDelete = async (id) => {
     const token = localStorage.getItem('adminToken')
 
-    await fetch(`${BASE_URL}/api/items/${id}`, {
+    await fetch(`${API_URL}/api/items/${id}`, {
       method: 'DELETE',
       headers: token ? { Authorization: `Bearer ${token}` } : {}
     })
@@ -64,11 +77,11 @@ export default function CategoryItems({ category }) {
                 {item.files.map((f, idx) => (
                   <img
                     key={idx}
-                    src={`${BASE_URL}${f.url}`}
+                    src={`${API_URL}${f.url}`}
                     alt={f.originalname}
                     onClick={() =>
                       setLightbox({
-                        url: `${BASE_URL}${f.url}`,
+                        url: `${API_URL}${f.url}`,
                         name: f.originalname
                       })
                     }
