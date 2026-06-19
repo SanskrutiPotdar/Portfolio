@@ -1,0 +1,140 @@
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.gridHeader {
+  margin-top: 25px;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.gridHeader h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 0 20px 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.15);
+}
+
+.previewWrapper {
+  height: 400px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.4;
+  min-height: auto;
+  margin: 0;
+}
+
+/* BUTTON SECTION */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.openBtn,
+.downloadBtn {
+  flex: 1;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.openBtn:hover,
+.downloadBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.openBtn:active,
+.downloadBtn:active {
+  transform: translateY(0);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .grid {
+    padding: 10px;
+    gap: 18px;
+  }
+
+  .previewWrapper {
+    height: 280px;
+  }
+
+  .gridHeader h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Keep buttons side-by-side on mobile */
+  .actions {
+    flex-direction: row;
+  }
+
+  .openBtn,
+  .downloadBtn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

@@ -12,6 +12,7 @@ const links = [
   { to: '/poetry', labelKey: 'nav.poetry' },
 
   { to: '/contact', labelKey: 'nav.contact' },
+  { to: '/downloads', labelKey: 'nav.downloads'},
 ]
 
 export default function Navbar() {

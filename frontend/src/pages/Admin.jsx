@@ -170,13 +170,11 @@ const data = await res.json()
     setError('Please enter a title before adding an item.')
     return
   }
-  console.log(itemForm)
   try {
     setLoading(true)
 
     const token = localStorage.getItem('adminToken')
-    console.log('TOKEN:', token)
-    
+
     let response
     const formData = new FormData()
 

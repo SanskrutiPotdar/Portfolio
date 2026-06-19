@@ -36,6 +36,7 @@ export default function Footer() {
           <Link to="/books">{t('nav.books')}</Link>
           <Link to="/poetry">{t('nav.poetry')}</Link>
           <Link to="/contact">{t('nav.contact')}</Link>
+          <Link to="/downloads">{t('nav.downloads')}</Link>
         </nav>
 
         {/* Social communication hooks */}

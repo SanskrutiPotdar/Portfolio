@@ -10,6 +10,7 @@ import Books from './pages/Books'
 import Poetry from './pages/Poetry'
 import Videos from './pages/Videos'
 import Contact from './pages/Contact'
+import Downloads from './pages/Downloads'
 import Admin from './pages/Admin'
 import ScrollToTop from './components/ScrollToTop'
 import { LanguageProvider } from './context/LanguageContext'
@@ -52,6 +53,7 @@ export default function App() {
               <Route path="/poetry"       element={<PageWrapper><Poetry /></PageWrapper>} />
               <Route path="/videos"       element={<PageWrapper><Videos /></PageWrapper>} />
               <Route path="/contact"      element={<PageWrapper><Contact /></PageWrapper>} />
+              <Route path="/downloads"    element={<PageWrapper><Downloads/></PageWrapper>} />
               <Route path="/admin"        element={<PageWrapper><Admin /></PageWrapper>} />
               <Route path="*"             element={<PageWrapper><About /></PageWrapper>} />
             </Routes>

@@ -15,6 +15,7 @@ const translations = {
       poetry: "Poetry",
       videos: "Videos",
       contact: "Contact",
+      downloads: "Downloads",
       admin: "Admin"
     },
     hero: {
@@ -126,6 +127,10 @@ const translations = {
       message: "Message",
       send: "Send Message",
       successAlert: "Message sent successfully"
+    },
+    downloads: {
+      title: "Downloads",
+      
     }
   },
   mr: {
@@ -139,6 +144,7 @@ const translations = {
       poetry: "कविता",
       videos: "व्हिडिओ",
       contact: "संपर्क",
+      downloads: "",
       admin: "अॅडमिन"
     },
     hero: {

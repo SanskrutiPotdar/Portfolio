@@ -245,21 +245,6 @@ const galleryImages = images.filter(img => {
           <CategoryItems category="Article" />
         </section>
       </div>
-
-         {/* PDF Grid
-        <div className={styles.gridHeader}>
-          <h2>{language === 'en' ? 'PDF Publications' : 'पीडीएफ प्रकाशने'} {filtered.length > 0 && `(${filtered.length})`}</h2>
-        </div>
-
-        {filtered.length > 0 ? (
-          <div className={styles.grid}>
-            {filtered.map(pdf => (
-              <PdfCard key={pdf.src} pdf={pdf} previewImage={previewMap[pdf.filename]} />
-            ))}
-          </div>
-        ) : (
-          <p className={styles.empty}>{t('articles.noPdfs')}</p>
-        )} */}
       
     </div>
   )
