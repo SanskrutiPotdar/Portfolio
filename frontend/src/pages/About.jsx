@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styles from '../styles/About.module.css'
 import { profileImageSrc } from '../utils/assets'
 import { useLanguage } from '../context/LanguageContext'
+import Slider from './Slider'
 
 export default function About() {
   const { t } = useLanguage()
@@ -44,6 +45,12 @@ export default function About() {
 
   return (
     <div className={styles.page}>
+       {/* NEW SLIDER SECTION */}
+  <section className={styles.sliderSection}>
+    <div className="container">
+      <Slider />
+    </div>
+  </section>
       <section className={styles.intro}>
         <div className="container">
           <div className={styles.introGrid}>

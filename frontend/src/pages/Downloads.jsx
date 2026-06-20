@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/Downloads.module.css";
 import { pdfs, pdfImages } from "../utils/assets";
 import { useLanguage } from "../context/LanguageContext";
+import { useSearchParams } from 'react-router-dom'
 
 export default function Downloads() {
   const { language } = useLanguage();
@@ -13,6 +14,10 @@ export default function Downloads() {
     ])
   );
 
+  const [searchParams] = useSearchParams()
+
+  const category = searchParams.get('category')
+
   return (
     <>
     <div className="container">
@@ -23,6 +28,11 @@ export default function Downloads() {
             : "पीडीएफ प्रकाशने"}
         </h2>
       </div>
+
+      {category === 'celebrity' && (
+  <h3 className={styles.categoryTitle}>
+  </h3>
+)}
 
       <div className={styles.grid}>
         {pdfs.map(pdf => (
