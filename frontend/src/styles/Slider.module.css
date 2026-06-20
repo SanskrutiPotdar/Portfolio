@@ -15,3 +15,34 @@
   height: 100%;
   object-fit: scale-down;
 }
+
+.lightboxDownloadBtn {
+  position: fixed;
+
+  /* below the close button */
+  top: 58px;
+  right: 16px;
+
+  z-index: 100000;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lightboxDownloadBtn:hover {
+  transform: scale(1.08);
+  background: rgba(0, 0, 0, 0.9);
+}

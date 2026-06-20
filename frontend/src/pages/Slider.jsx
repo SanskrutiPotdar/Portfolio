@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import { useNavigate } from 'react-router-dom'
 import styles from '../styles/Slider.module.css'
 import Lightbox from 'yet-another-react-lightbox'
+import { FiDownload } from 'react-icons/fi'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -86,11 +87,21 @@ console.log(lightboxSlides)
         ))}
       </Swiper>
       <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={index}
-        slides={lightboxSlides}
-      />
-    </div>
-  )
+  open={open}
+  close={() => setOpen(false)}
+  index={index}
+  slides={lightboxSlides}
+/>
+
+{open && (
+  <button
+    className={styles.lightboxDownloadBtn}
+    onClick={() => navigate('/downloads?category=celebrity')}
+    aria-label="Download"
+  >
+    <FiDownload size={20} />
+  </button>
+)}
+      </div>
+    )
 }
