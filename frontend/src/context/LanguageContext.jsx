@@ -35,6 +35,7 @@ const translations = {
       title: "About Prashant Pitaliya",
       desc: "Prashant Pitaliya, Began his career with distinguished academic and extra curriculum records. He has done his degree in economics, diploma in HRD, Journalism & Mass communication, MBA in Marketing & Production. He has attended professional training in MBTI, WPR, TQM/ISO, Certified coach, time & stress management etc.",
       desc2: "Prashant has bought out that best things in life are simple in a very simple manner working from Officer level to CEO post at a very young age. He has served well known organizations like Ghatge Patil, KT group in textile, Sakal media group, SSVSS, D Y Patil , Suryadatta  & other educational institutions for the last 20+ years. Having total 28 + years experience ,his work prominently involved synthesizing organisational processes, corporate training , creativity and productivity , public and media relation, Idea generation for profitability, Systems implementation for better quality & service, general administration, liaison with government. He is a poet, author, columnist & excellent motivational mentor. He has written 14 books out of which 4 are in the best seller category.",
+      downloadProfile: "Download My Profile",
       author: "Author",
       authorDesc: "Transforming ideas into books that inspire growth, purpose, and lifelong learning. 14+ books , many articles",
       poet: "Poet",
@@ -76,7 +77,6 @@ const translations = {
       t2020: "Served as Personal Assistant to the Chancellor of Dr. D. Y. Patil Vidyapeeth , Pune",
       t2021: "Joined Suryadatta Group of Institutes as Director - OD & CSR. - Leading CSR, branding, public relations, documentation, and strategic institutional development initiatives.",
       t2026: "Joined BJS , Pune"
-     
     },
     articles: {
       title: "Mantras for Positive Living",

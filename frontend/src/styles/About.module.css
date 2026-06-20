@@ -165,3 +165,19 @@
   object-fit: cover;
   display: block;
 }
+
+.downloadBtn {
+  padding: 12px 24px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}

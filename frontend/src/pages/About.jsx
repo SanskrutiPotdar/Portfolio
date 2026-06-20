@@ -75,7 +75,11 @@ export default function About() {
               <p className={styles.bio}>
                 {t('about.desc2')}
               </p>
-          
+              <Link to="/downloads">
+  <button type="button" className={styles.downloadBtn}>
+    📄 {t('about.downloadProfile')}
+  </button>
+</Link>
             </div>
           </div>
         </div>
