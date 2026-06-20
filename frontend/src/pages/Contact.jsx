@@ -24,7 +24,7 @@ Message:
 ${message}
     `
 
-     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sanskrutipotdar3@gmail.com&su=${encodeURIComponent(
+     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=pprarupi@gmail.com&su=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}`
 
