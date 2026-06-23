@@ -115,8 +115,9 @@
 
 @media (max-width: 768px) {
   .grid {
-    padding: 10px;
-    gap: 18px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 10px 0;
   }
 
   .previewWrapper {
@@ -136,5 +137,10 @@
   .downloadBtn {
     font-size: 0.9rem;
     padding: 10px;
+  }
+
+   .card {
+    width: 100%;
+    max-width: 340px;
   }
 }
