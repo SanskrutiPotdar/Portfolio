@@ -9,7 +9,6 @@ import Slider from './pages/Slider'
 import Articles from './pages/Articles'
 import Books from './pages/Books'
 import Poetry from './pages/Poetry'
-import Videos from './pages/Videos'
 import Contact from './pages/Contact'
 import Downloads from './pages/Downloads'
 import Admin from './pages/Admin'
@@ -52,7 +51,6 @@ export default function App() {
               <Route path="/articles"     element={<PageWrapper><Articles /></PageWrapper>} />
               <Route path="/books"        element={<PageWrapper><Books /></PageWrapper>} />
               <Route path="/poetry"       element={<PageWrapper><Poetry /></PageWrapper>} />
-              <Route path="/videos"       element={<PageWrapper><Videos /></PageWrapper>} />
               <Route path="/contact"      element={<PageWrapper><Contact /></PageWrapper>} />
               <Route path="/downloads"    element={<PageWrapper><Downloads/></PageWrapper>} />
               <Route path="/admin"        element={<PageWrapper><Admin /></PageWrapper>} />

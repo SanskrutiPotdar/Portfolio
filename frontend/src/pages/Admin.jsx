@@ -407,6 +407,7 @@ response = await fetch(`${API_URL}/api/items`, {
                       <option>Article</option>
                       <option>Book</option>
                       <option>Poetry</option>
+                      <option>Downloads</option>
                       <option>Other</option>
                     </select>
                   </label>
