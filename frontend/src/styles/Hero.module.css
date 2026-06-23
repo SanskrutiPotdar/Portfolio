@@ -1,4 +1,7 @@
 .hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   position: relative;
   overflow: hidden;
   padding: 72px 0 0;
@@ -159,17 +162,28 @@
   .inner {
     flex-direction: column;
     text-align: center;
+    padding: 40px 0 0;
     gap: 32px;
   }
   .desc { margin: 0 auto 28px; }
   .ctas { justify-content: center; }
   .profileWrap { width: 200px; height: 200px; }
   .avatar { width: 200px; height: 200px; }
+
+  .statsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
 }
 
 .heroSwiper {
   width: 100%;
-  max-width: 320px;
+  max-width: 100%;
   margin-bottom: 20px;
   border-radius: 20px;
   overflow: hidden;
@@ -180,4 +194,51 @@
   height: 220px;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 480px) {
+  .profileWrap {
+    width: 160px;
+    height: 160px;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .name {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+   .ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .swiperImage {
+    height: 180px;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .statValue {
+    font-size: 24px;
+  }
 }
