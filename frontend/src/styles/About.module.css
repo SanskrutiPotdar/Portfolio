@@ -181,3 +181,37 @@
   transform: translateY(-2px);
   opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .photoCol {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+  .timelineItem {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .timelineYear {
+    margin-bottom: 8px;
+  }
+
+  .rolesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .rolesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+}

@@ -1,11 +1,11 @@
 .sliderContainer {
   width: 100%;
-  height: 100;
+  height: 100%;
 }
 
 .aboutSwiper {
   width: 100%;
-  height: 300px;
+  height: clamp(180px, 40vw, 400px);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -45,4 +45,24 @@
 .lightboxDownloadBtn:hover {
   transform: scale(1.08);
   background: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 768px) {
+  .aboutSwiper {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSwiper {
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  .lightboxDownloadBtn {
+    top: 70px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+  }
 }
