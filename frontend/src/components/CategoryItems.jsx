@@ -16,7 +16,7 @@ export default function CategoryItems({ category }) {
 
     async function fetchItems() {
   try {
-    const res = await fetch(`${API_URL}/api/items`)
+    const res = await fetch(`${API_URL}/items`)
     const data = await res.json()
 
     console.log('API Response:', data)
@@ -55,7 +55,7 @@ export default function CategoryItems({ category }) {
   const handleDelete = async (id) => {
     const token = localStorage.getItem('adminToken')
 
-    await fetch(`${API_URL}/api/items/${id}`, {
+    await fetch(`${API_URL}/items/${id}`, {
       method: 'DELETE',
       headers: token ? { Authorization: `Bearer ${token}` } : {}
     })
