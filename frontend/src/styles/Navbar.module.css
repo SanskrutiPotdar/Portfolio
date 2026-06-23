@@ -218,3 +218,36 @@
   display: block;
 }
  
+@media (max-width: 768px) {
+  .logo {
+    height: 36px;
+  }
+
+  .inner {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .nav {
+    top: 60px;
+  }
+
+  @media (max-width: 480px) {
+  .actions {
+    gap: 4px;
+  }
+
+  .themeBtn,
+  .langBtn,
+  .burger,
+  .userBtn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .langBtn {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+}
+}
