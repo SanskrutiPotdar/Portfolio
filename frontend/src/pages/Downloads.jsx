@@ -79,7 +79,7 @@ export default function Downloads() {
       </div>
         <div className="container" style={{ marginTop: 32 }}>
   <h2 className="section-title">Latest Downloads</h2>
-  <CategoryItems category="Download" />
+  <CategoryItems category="Downloads" />
 </div>
       </div>
     </>
