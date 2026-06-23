@@ -3,6 +3,7 @@ import styles from "../styles/Downloads.module.css";
 import { pdfs, pdfImages } from "../utils/assets";
 import { useLanguage } from "../context/LanguageContext";
 import { useSearchParams } from 'react-router-dom'
+import CategoryItems from '../components/CategoryItems'
 
 export default function Downloads() {
   const { language } = useLanguage();
@@ -76,6 +77,10 @@ export default function Downloads() {
           </div>
         ))}
       </div>
+        <div className="container" style={{ marginTop: 32 }}>
+  <h2 className="section-title">Latest Downloads</h2>
+  <CategoryItems category="Download" />
+</div>
       </div>
     </>
   );
